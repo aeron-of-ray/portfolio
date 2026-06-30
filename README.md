@@ -1,6 +1,6 @@
 # Aeron Ray Manriza — Portfolio
 
-A minimal, dark-themed personal portfolio built with React + Vite + TypeScript + Tailwind CSS v4, inspired by [antfu.me](https://antfu.me).
+A minimal, dark-themed personal portfolio built with React + Vite + TypeScript + Tailwind CSS v4, inspired by [antfu.me]
 
 ## Stack
 
