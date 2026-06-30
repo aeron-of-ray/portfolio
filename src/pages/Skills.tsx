@@ -1,36 +1,8 @@
-interface SkillGroup {
-  category: string
-  items: string[]
-}
-
-const skillGroups: SkillGroup[] = [
-  {
-    category: 'Frontend',
-    items: ['React JS', 'Angular', 'AngularJS', 'React Native', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'jQuery', 'Bootstrap'],
-  },
-  {
-    category: 'Backend',
-    items: ['C# .NET Core', '.NET API', 'EF Core', 'ASP.NET MVC', 'ASP Classic', 'Python', 'Node.js'],
-  },
-  {
-    category: 'Databases',
-    items: ['PostgreSQL', 'MSSQL', 'MySQL', 'Oracle', 'SQLite', 'DynamoDB', 'Redis', 'Supabase', 'Firebase'],
-  },
-  {
-    category: 'Cloud & DevOps',
-    items: ['AWS ECS', 'AWS S3', 'AWS Lambda', 'AWS SQS', 'AWS RDS', 'AWS CodeBuild', 'AWS CodeDeploy', 'Docker', 'Azure DevOps', 'Azure Functions', 'GitHub Actions', 'GitLab CI', 'CloudFlare'],
-  },
-  {
-    category: 'Reporting',
-    items: ['SSRS', 'Power BI', 'Crystal Reports'],
-  },
-  {
-    category: 'Other Tools',
-    items: ['Git', 'GitHub', 'GitLab', 'WordPress', 'Shopify', 'Power Apps', 'AI-Assisted Development'],
-  },
-]
+import resume from '../data/resume.json'
 
 export default function Skills() {
+  const { skills, practices } = resume
+
   return (
     <div className="py-8">
       <h2 className="text-xl font-semibold mb-1" style={{ color: '#f0f0f0' }}>
@@ -41,7 +13,7 @@ export default function Skills() {
       </p>
 
       <div className="space-y-8">
-        {skillGroups.map((group) => (
+        {skills.map((group) => (
           <div key={group.category}>
             <h3 className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#555' }}>
               {group.category}
@@ -70,16 +42,7 @@ export default function Skills() {
           Practices &amp; Methodologies
         </h3>
         <div className="flex flex-wrap gap-2">
-          {[
-            'Agile / Scrum',
-            'Test-Driven Development',
-            'Domain-Driven Design',
-            'Microservices',
-            'Modular Monolith',
-            'CI/CD',
-            'Code Review',
-            'Vulnerability Remediation',
-          ].map((item) => (
+          {practices.map((item) => (
             <span
               key={item}
               className="px-3 py-1 text-sm rounded-md"

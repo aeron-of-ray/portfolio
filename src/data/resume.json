@@ -1,0 +1,120 @@
+{
+  "personal": {
+    "name": "Aeron Ray Manriza",
+    "title": "Application Developer",
+    "location": "Quezon City, Philippines",
+    "email": "aeronraym@gmail.com",
+    "bio": [
+      "Hello, I'm Aeron, a full-stack application developer based in {location}.",
+      "Currently working at {company} as an Application Developer, building enterprise systems using {techStack}.",
+      "I specialize in full-stack development with a focus on maintainable architectures, cloud-native solutions, and developer experience. I enjoy applying {practices} in modular monolith and microservices applications."
+    ],
+    "bioHighlights": {
+      "location": "Quezon City, Philippines",
+      "company": {
+        "name": "IBM Solutions Delivery",
+        "url": "https://www.ibm.com"
+      },
+      "techStack": ".NET + AWS + Docker + React",
+      "practices": "TDD and Domain-Driven Design"
+    }
+  },
+  "socialLinks": [
+    { "label": "GitHub", "href": "https://github.com/aeron-of-ray" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/aeronraym" }
+  ],
+  "experience": [
+    {
+      "company": "IBM Solutions Delivery",
+      "location": "Commonwealth, Quezon City",
+      "role": "Application Developer",
+      "period": "March 2024 – Present",
+      "bullets": [
+        "Lead development of 2 enterprise projects for a Multimedia company using .NET + AWS ECS + Docker + SQS + S3 + Redis + Lambda + DynamoDB + RDS.",
+        "Leveraged Agile methodologies to iteratively build, test, and ship production-ready features for a grant management system written in AngularJS + .NET + Azure Functions.",
+        "Vulnerability remediation and triaging of 5 healthcare systems written in Angular / React / .NET / ASP.NET MVC / .NET Webforms and WinForms.",
+        "Developed and deployed enhancements for React Native applications for a healthcare company.",
+        "Applied Test-Driven Development and Domain-Driven Design in modular monolith and microservices applications.",
+        "Used Docker, GitHub, AWS S3, CodeBuild, CodeDeploy and Azure DevOps for CI/CD.",
+        "Spearheaded code reviews for junior developers, improving code maintainability and reducing post-release bugs.",
+        "Handled data patches and query optimizations for SQL scripts (PostgreSQL, Oracle, MSSQL)."
+      ]
+    },
+    {
+      "company": "Support Services Group Inc.",
+      "location": "Makati City",
+      "role": "Software Developer / DBA",
+      "period": "February 2021 – March 2024",
+      "bullets": [
+        "Acted as technical consultant and support for L1, L2, and L3 — overseeing and addressing client inquiries for multiple legacy systems written in ASP Classic + jQuery, .NET 6.0 + React/Angular, and WordPress.",
+        "Co-authored Admin Management System and Human Resource Management System in React JS and .NET 6 API.",
+        "Co-authored modernization of legacy CRM from ASP Classic to React JS and .NET 6 API.",
+        "Led development of a knowledge base system in AngularJS and .NET 6 API.",
+        "Managed and tested database backup and recovery plans.",
+        "Led data extraction, loading, purging, and migration processes."
+      ]
+    },
+    {
+      "company": "Servio Technologies, Inc.",
+      "location": "Eastwood City, Quezon City",
+      "role": "Software Development Engineer",
+      "period": "June 2019 – September 2020",
+      "bullets": [
+        "Developed and deployed enhancements for a Human Resource Information System (.NET 3.5/4, WinForms + WebForms + SQL).",
+        "Led creation of customized system reports using SQL, SSRS, and Crystal Reports.",
+        "Performed manual testing of enhancements in QA/Staging environments.",
+        "Handled data patches for HRIS, Time Management, and Payroll systems.",
+        "Provided technical solution documents for client change requests."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science, Computer Science",
+      "school": "Taguig City University",
+      "location": "Taguig City",
+      "year": "June 2019"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["React JS", "Angular", "AngularJS", "React Native", "TypeScript", "JavaScript", "HTML", "CSS", "jQuery", "Bootstrap"]
+    },
+    {
+      "category": "Backend",
+      "items": ["C# .NET Core", ".NET API", "EF Core", "ASP.NET MVC", "ASP Classic", "Python", "Node.js"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MSSQL", "MySQL", "Oracle", "SQLite", "DynamoDB", "Redis", "Supabase", "Firebase"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": ["AWS ECS", "AWS S3", "AWS Lambda", "AWS SQS", "AWS RDS", "AWS CodeBuild", "AWS CodeDeploy", "Docker", "Azure DevOps", "Azure Functions", "GitHub Actions", "GitLab CI", "CloudFlare"]
+    },
+    {
+      "category": "Reporting",
+      "items": ["SSRS", "Power BI", "Crystal Reports"]
+    },
+    {
+      "category": "Other Tools",
+      "items": ["Git", "GitHub", "GitLab", "WordPress", "Shopify", "Power Apps", "AI-Assisted Development"]
+    }
+  ],
+  "practices": [
+    "Agile / Scrum",
+    "Test-Driven Development",
+    "Domain-Driven Design",
+    "Microservices",
+    "Modular Monolith",
+    "CI/CD",
+    "Code Review",
+    "Vulnerability Remediation"
+  ],
+  "navigation": [
+    { "label": "Home", "to": "/" },
+    { "label": "Experience", "to": "/experience" },
+    { "label": "Skills", "to": "/skills" }
+  ]
+}

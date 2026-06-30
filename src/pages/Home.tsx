@@ -1,26 +1,30 @@
 import { Link } from 'react-router-dom'
+import resume from '../data/resume.json'
 
 export default function Home() {
+  const { personal, socialLinks } = resume
+  const { company, techStack, practices } = personal.bioHighlights
+
   return (
     <div className="py-8">
       {/* Hero */}
       <section className="mb-12">
         <h1 className="text-2xl font-semibold mb-1" style={{ color: '#f0f0f0' }}>
-          Aeron Ray Manriza
+          {personal.name}
         </h1>
         <p className="text-base mb-6" style={{ color: '#888' }}>
-          Application Developer
+          {personal.title}
         </p>
 
         <div className="text-[0.95rem] leading-7 space-y-3" style={{ color: '#ccc' }}>
           <p>
             Hello, I'm Aeron, a full-stack application developer based in{' '}
-            <span style={{ color: '#e8e8e8' }}>Quezon City, Philippines</span>.
+            <span style={{ color: '#e8e8e8' }}>{personal.location}</span>.
           </p>
           <p>
             Currently working at{' '}
             <a
-              href="https://www.ibm.com"
+              href={company.url}
               target="_blank"
               rel="noopener noreferrer"
               className="border-b transition-colors duration-150"
@@ -28,15 +32,15 @@ export default function Home() {
               onMouseEnter={e => (e.currentTarget.style.borderColor = '#a8c5da')}
               onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(168,197,218,0.3)')}
             >
-              IBM Solutions Delivery
+              {company.name}
             </a>{' '}
             as an Application Developer, building enterprise systems using{' '}
-            <span style={{ color: '#e8e8e8' }}>.NET + AWS + Docker + React</span>.
+            <span style={{ color: '#e8e8e8' }}>{techStack}</span>.
           </p>
           <p>
             I specialize in full-stack development with a focus on maintainable architectures,
             cloud-native solutions, and developer experience. I enjoy applying{' '}
-            <span style={{ color: '#e8e8e8' }}>TDD and Domain-Driven Design</span> in modular
+            <span style={{ color: '#e8e8e8' }}>{practices}</span> in modular
             monolith and microservices applications.
           </p>
         </div>
@@ -50,7 +54,7 @@ export default function Home() {
           <QuickLink
             to="/experience"
             label="Work Experience"
-            description="IBM, Support Services Group, Servio Technologies"
+            description={resume.experience.map(j => j.company).join(', ')}
             icon={
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="14" x="2" y="7" rx="2" />
@@ -61,7 +65,7 @@ export default function Home() {
           <QuickLink
             to="/skills"
             label="Tech Stack & Skills"
-            description="React, .NET, AWS, Docker, SQL and more"
+            description={resume.skills.slice(0, 3).map(s => s.category).join(', ') + ' and more'}
             icon={
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="16 18 22 12 16 6" />
@@ -70,9 +74,9 @@ export default function Home() {
             }
           />
           <ExternalLink
-            href="mailto:aeronraym@gmail.com"
+            href={`mailto:${personal.email}`}
             label="Get in Touch"
-            description="aeronraym@gmail.com"
+            description={personal.email}
             icon={
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -89,10 +93,7 @@ export default function Home() {
       <section>
         <p className="text-sm mb-4" style={{ color: '#666' }}>Find me on</p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
-          {[
-            { label: 'GitHub', href: 'https://github.com/aeronraym' },
-            { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aeronraym' },
-          ].map(({ label, href }) => (
+          {socialLinks.map(({ label, href }) => (
             <a
               key={label}
               href={href}
@@ -110,13 +111,13 @@ export default function Home() {
         <div className="mt-3 text-sm" style={{ color: '#666' }}>
           Or mail me at{' '}
           <a
-            href="mailto:aeronraym@gmail.com"
+            href={`mailto:${personal.email}`}
             style={{ color: '#888' }}
             onMouseEnter={e => (e.currentTarget.style.color = '#ccc')}
             onMouseLeave={e => (e.currentTarget.style.color = '#888')}
             className="transition-colors duration-150"
           >
-            aeronraym@gmail.com
+            {personal.email}
           </a>
         </div>
       </section>
